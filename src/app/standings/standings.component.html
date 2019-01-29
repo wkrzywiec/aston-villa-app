@@ -1,0 +1,31 @@
+<div class="tile">
+  
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Team</th>
+        <th scope="col">Position</th>
+        <th scope="col">Points</th>
+        <th scope="col">Played</th>
+        <th scope="col">Wins</th>
+        <th scope="col">Draws</th>
+        <th scope="col">Lose</th>
+        <th scope="col">Goals Forward</th>
+        <th scope="col">Goals Against</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let standing of standings">
+        <td>{{standing.team_name}}</td>
+        <td>{{standing.overall_league_position}}</td>
+        <td>{{standing.overall_league_PTS}}</td>
+        <td>{{standing.overall_league_payed}}</td>
+        <td>{{standing.overall_league_W}}</td>
+        <td>{{standing.overall_league_D}}</td>
+        <td>{{standing.overall_league_L}}</td>
+        <td>{{standing.overall_league_GF}}</td>
+        <td>{{standing.overall_league_GA}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

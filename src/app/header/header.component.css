@@ -1,0 +1,9 @@
+.bg-claret {
+    background-color: #670E36;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
