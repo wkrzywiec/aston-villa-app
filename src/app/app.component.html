@@ -1,9 +1,11 @@
-<app-header></app-header>
+<div class="site-container">
 
-<div class="container">
-    <router-outlet></router-outlet>
-</div>
+    <app-header></app-header>
 
-<div class="container" style="margin-top: 15px;">
+    <div class="container dashboard-container">
+        <router-outlet></router-outlet>
+    </div>
+
     <app-footer></app-footer>
+
 </div>

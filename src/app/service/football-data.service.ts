@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Standing} from '../standings/standings.component';
+import { Standing} from '../model/standing';
 import ODataStore from "devextreme/data/odata/store";
 import DataSource from "devextreme/data/data_source";
 

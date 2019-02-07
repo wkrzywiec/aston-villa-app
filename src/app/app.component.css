@@ -1,4 +1,10 @@
-div {
-    margin-top: 5%;
-    margin-bottom: 5%;
+
+.site-container {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  
+.dashboard-container {
+    flex: 1;
 }

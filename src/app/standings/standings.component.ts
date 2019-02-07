@@ -1,19 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FootballDataService } from '../service/football-data.service';
+import { Standing} from '../model/standing'
+import { DxDataGridModule } from "devextreme-angular";
 
-export class Standing {
-  constructor(
-      public team_name: String,
-      public overall_league_position: number,
-      public overall_league_payed: number,
-      public overall_league_W: number,
-      public overall_league_D: number,
-      public overall_league_L: number,
-      public overall_league_GF: number,
-      public overall_league_GA: number,
-      public overall_league_PTS: number
-  ){}
-}
 
 @Component({
   selector: 'app-standings',
@@ -23,7 +12,6 @@ export class Standing {
 export class StandingsComponent implements OnInit {
   
   standings: Standing[];
-
 
   constructor(
     private footballService: FootballDataService

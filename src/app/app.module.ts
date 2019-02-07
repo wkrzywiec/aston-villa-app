@@ -9,7 +9,6 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { StandingsComponent } from './standings/standings.component';
 import { DxDataGridModule } from 'devextreme-angular';
-import { FootballDataService } from './service/football-data.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +24,7 @@ import { FootballDataService } from './service/football-data.service';
     HttpClientModule,
     DxDataGridModule
   ],
-  providers: [FootballDataService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
