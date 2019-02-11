@@ -8,8 +8,8 @@ import { Observable } from 'rxjs';
 })
 export class FootballDataService {
 
-  private standingURL = '';
-  //private standingURL = 'https://apifootball.com/api/?APIkey=9312f9173fad7330dc780c926a665525c9023c3c4433416130766a602be7c83e&action=get_standings&league_id=63';
+  //private standingURL = '';
+  private standingURL = 'https://apifootball.com/api/?APIkey=9312f9173fad7330dc780c926a665525c9023c3c4433416130766a602be7c83e&action=get_standings&league_id=63';
 
   constructor(private http: HttpClient) { }
 

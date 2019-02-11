@@ -8,3 +8,8 @@
 .dashboard-container {
     flex: 1;
 }
+
+.villa-info {
+  margin-top: 50px;
+  display: flex;
+}
