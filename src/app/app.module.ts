@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { StandingsComponent } from './standings/standings.component';
-import { DxDataGridModule } from 'devextreme-angular';
 
 @NgModule({
   declarations: [
@@ -21,8 +20,7 @@ import { DxDataGridModule } from 'devextreme-angular';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule,
-    DxDataGridModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
