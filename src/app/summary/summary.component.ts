@@ -17,15 +17,26 @@ export class SummaryComponent implements OnInit {
   }
 
   getLeaguePosition(): void {
+
     this.footballDataService.retrieveAllStandings().subscribe ( 
       
     response => {
       let standings = response;
-      this.position = standings.find(x => x.team_name === 'Aston Villa').overall_league_position;
+      let avStanding = standings.find(x => x.team_name === 'Aston Villa');
+      if (typeof avStanding === 'undefined') {
+        this.getTestLeaguePosition();
+      } else {
+        this.position = avStanding.overall_league_position;
+      }
+      
     },
     error => {
-     let standings = this.footballDataService.retrieveTestStandings();
-     this.position = standings.find(x => x.team_name === 'Aston Villa').overall_league_position;
+     this.getTestLeaguePosition()
     });
+  }
+
+  private getTestLeaguePosition(): void {
+    let standings = this.footballDataService.retrieveTestStandings();
+    this.position = standings.find(x => x.team_name === 'Aston Villa').overall_league_position;
   }
 }

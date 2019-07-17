@@ -24,12 +24,13 @@ export class StandingsComponent implements OnInit {
       
       response => {
         this.standings = response;
+        if (!this.isAVInStandings(this.standings)) 
+          this.standings = this.footballService.retrieveTestStandings();
       },
       error => {
         this.standings = this.footballService.retrieveTestStandings();
       }
     );
-
   }
 
   setRowColor(position): String {
@@ -154,6 +155,16 @@ export class StandingsComponent implements OnInit {
       case 'Wigan Athletic': {
         return 'wigan-picture';
       }
+    }
+  }
+
+  private isAVInStandings(standings: Standing[]): boolean{
+    let avStanding = standings.find(x => x.team_name === 'Aston Villa');
+
+    if (typeof avStanding === 'undefined') {
+      return false;
+    } else {
+      return true;
     }
   }
 }
