@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'docker build -t aston-villa .'
+                sh 'sudo docker build -t aston-villa .'
             }
         }
     }
