@@ -8,13 +8,13 @@ pipeline {
             }
         }
 
-        stage('Verify') {                 
+        stage('Build') {                 
             steps {
                 echo "$GIT_BRANCH"             
             }
         } 
 
-        stage('Verify') {                 
+        stage('Deploy') {                 
             steps {
                 echo "$GIT_BRANCH"             
             }
