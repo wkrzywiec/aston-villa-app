@@ -10,7 +10,7 @@ pipeline {
 
         stage('Build') {                 
             steps {
-                echo "$GIT_BRANCH"             
+                app = docker.build("asto-villa/test")           
             }
         } 
 
