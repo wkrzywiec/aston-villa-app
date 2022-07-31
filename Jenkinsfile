@@ -1,5 +1,5 @@
 pipeline {
-    def app
+   
     agent any
     stages {
         stage('Verify') {                 
@@ -10,7 +10,7 @@ pipeline {
 
         stage('Build') {                 
             steps {
-                app = docker.build("asto-villa/test")           
+                docker.build("asto-villa/test")           
             }
         } 
 
