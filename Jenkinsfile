@@ -1,19 +1,15 @@
 pipeline {
     agent any
     stages {
-         stage('Clone repository') { 
-            steps { 
-                script{
-                checkout scm
-                }
+         stage('Verify Branch') { 
+            echo "${GIT_BRANCH}
             }
         }
 
         stage('Build') { 
             steps { 
-                script{
-                  app = docker.build("web-app")
-                }
+                sh 'docker build -t aston-villa .'
+                
             }
         }
         stage('Test'){
