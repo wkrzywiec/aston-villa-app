@@ -1,5 +1,5 @@
 pipeline {
-
+    def app
     agent any
     stages {
         stage('Verify') {                 
