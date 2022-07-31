@@ -1,23 +1,30 @@
 pipeline {
-   
     agent any
     stages {
-        stage('Verify') {                 
-            steps {
-                echo "$GIT_BRANCH"             
+         stage('Clone repository') { 
+            steps { 
+                script{
+                checkout scm
+                }
             }
         }
 
-        stage('Build') {                 
-            steps {
-                docker.build("asto-villa/test")           
+        stage('Build') { 
+            steps { 
+                script{
+                 app = docker.build("underwater")
+                }
             }
-        } 
-
-        stage('Deploy') {                 
+        }
+        stage('Test'){
             steps {
-                echo "$GIT_BRANCH"             
+                 echo 'testing'
             }
-        } 
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying'
+            }
+        }
     }
 }
