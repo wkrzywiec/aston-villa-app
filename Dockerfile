@@ -4,6 +4,7 @@ WORKDIR /usr/src/app
 COPY package.json package-lock.json ./
 RUN npm config rm proxy
 RUN npm config rm https-proxy
+RUN npm config delete proxy
 RUN npm install
 COPY . .
 RUN npm run build
